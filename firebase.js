@@ -7,12 +7,18 @@ import "firebase/messaging"; // for cloud messaging
 import "firebase/functions"; // for cloud functions
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
+		apiKey: 'AIzaSyBnnsKjNyJISYWbGSbWHVArMI277YMgeDo',
 	authDomain: 'whatsapp-next-19a5c.firebaseapp.com',
 	projectId: 'whatsapp-next-19a5c',
 	storageBucket: 'whatsapp-next-19a5c.appspot.com',
-	messagingSenderId: process.env.REACT_APP_MSG_ID,
-	appId: process.env.REACT_APP_APP_ID,
+	messagingSenderId: '349913385150',
+	appId: '1:349913385150:web:964de44a8ecc46d69fb6ef',
+//     apiKey: process.env.REACT_APP_API_KEY,
+// 	authDomain: 'whatsapp-next-19a5c.firebaseapp.com',
+// 	projectId: 'whatsapp-next-19a5c',
+// 	storageBucket: 'whatsapp-next-19a5c.appspot.com',
+// 	messagingSenderId: process.env.REACT_APP_MSG_ID,
+// 	appId: process.env.REACT_APP_APP_ID,
 };
 
 const app = !firebase.apps.length
