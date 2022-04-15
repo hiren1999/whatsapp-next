@@ -1,10 +1,10 @@
-import "../styles/globals.css";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "../firebase";
-import Login from "./login";
-import Loading from "../componets/Loading";
-import firebase from "firebase";
-import { useEffect } from "react";
+import '../styles/globals.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, db } from '../firebase';
+import Login from './login';
+import Loading from '../components/Loading';
+import firebase from 'firebase';
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
     /* <---- check user is logged or not  -----> */
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     /* <---- New User stored in db   -----> */
     useEffect(() => {
         if (user) {
-            db.collection("users")
+            db.collection('users')
                 .doc(user.uid)
                 .set(
                     {
@@ -25,8 +25,10 @@ function MyApp({ Component, pageProps }) {
                         merge: true,
                     }
                 )
-                .then(() => console.log("Document successfully written!"))
-                .catch((err) => console.log(err, "Error writing document"));
+                .then(() =>
+                    console.log('_app.js Document successfully written! ')
+                )
+                .catch((err) => console.log(err, 'Error writing document'));
         }
     }, [user]);
 
